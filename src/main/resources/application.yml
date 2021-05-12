@@ -16,6 +16,8 @@ graphql:
     headers:
       Authorization: Bearer TOKEN
       user_id: idp|jerry
+      # security test 시에는 이 부분 빼고 실행해볼 것
+      user_roles : "get:bank_account,get:bank_account_balance"
     tabs:
       - name: Bank account sample query
         query: classpath:playground/bank_account.graphql

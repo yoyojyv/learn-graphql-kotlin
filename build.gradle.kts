@@ -20,11 +20,13 @@ extra["graphqlSpringBootVersion"] = "11.0.0"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.security:spring-security-test")
 
 	// graphql
 	implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:${property("graphqlSpringBootVersion")}")

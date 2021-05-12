@@ -15,6 +15,8 @@
 - graphiql: http://localhost:8080/graphiql
 - voyager: http://localhost:8080/voyager
 
+## spring security 부분
+graphql.playground.headers 쪽에 user_id, user_roles 를 설정하면 해당 헤더의 값을 보고 filter 를 타도록 구성이 되어있음
 
 ## 추후 봐야할 것
 - reactive stack 에서는?

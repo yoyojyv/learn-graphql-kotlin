@@ -3,15 +3,15 @@ package me.jerry.example.graphql.resolver.bank.query
 import graphql.kickstart.tools.GraphQLQueryResolver
 import graphql.relay.*
 import graphql.schema.DataFetchingEnvironment
-import me.jerry.example.graphql.BankAccountRepository
+import me.jerry.example.graphql.repository.BankAccountRepository
 import me.jerry.example.graphql.connection.CursorUtil
 import me.jerry.example.graphql.context.CustomGraphQLContext
 import me.jerry.example.graphql.domain.bank.BankAccount
 import me.jerry.example.graphql.domain.bank.Currency
 import me.jerry.example.graphql.support.Logger
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.stereotype.Component
 import java.util.*
-import java.util.stream.Collectors
 
 
 @Component
@@ -22,6 +22,7 @@ class BankAccountQueryResolver(
 
     companion object : Logger()
 
+    @PreAuthorize("hasAuthority('get:bank_account')")
     fun bankAccount(id: UUID?, environment: DataFetchingEnvironment): BankAccount {
         logger.info("Retrieving bank account id : {}", id)
 

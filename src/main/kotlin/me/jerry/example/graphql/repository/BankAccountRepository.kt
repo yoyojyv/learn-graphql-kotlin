@@ -1,4 +1,4 @@
-package me.jerry.example.graphql
+package me.jerry.example.graphql.repository
 
 import me.jerry.example.graphql.domain.bank.BankAccount
 import me.jerry.example.graphql.domain.bank.Currency
