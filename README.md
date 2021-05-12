@@ -10,6 +10,12 @@
 - Introduction to extended scalars: https://www.graphql-java.com/blog/introducing-extended-scalars/
 - Java Extended scalars github: https://github.com/graphql-java/graphql-java-extended-scalars
 
+## 로컬서 돌릴때 볼 것들
+- playground: http://localhost:8080/playground
+- graphiql: http://localhost:8080/graphiql
+- voyager: http://localhost:8080/voyager
+
+
 ## 추후 봐야할 것
 - reactive stack 에서는?
 - security 적용
