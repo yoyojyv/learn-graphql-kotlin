@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: learn-graphql-kotlin
+
+server:
+  http2:
+    enabled: true
+
+graphql:
+  servlet:
+    max-query-depth: 100
+    tracing-enabled: true
+    exception-handlers-enabled: true
+
+  playground:
+    headers:
+      Authorization: Bearer TOKEN
+      user_id: idp|jerry
+    tabs:
+      - name: Bank account sample query
+        query: classpath:playground/bank_account.graphql
+        variables: classpath:playground/bank_account_vatiables.json
+
+voyager:
+  enabled: true

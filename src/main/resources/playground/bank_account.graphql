@@ -1,0 +1,51 @@
+#Get Jerry's Bank account
+query GET_BANK_ACCOUNT($id: ID) {
+    bankAccount(id: $id) {
+        currency
+        client {
+            id
+            firstName
+            lastName
+        }
+        assets {
+            id
+        }
+    }
+}
+
+query GET_BANK_ACCOUNTS {
+    bankAccounts(first: 3, after: "MDI0YmI1MDMtNWMwZi00ZDYwLWFhNDQtZGIxOWQ4NzA0MmY0") {
+        edges {
+            cursor
+            node {
+                id
+                createdAt
+                currency
+                client {
+                    id
+                    firstName
+                }
+                balance
+            }
+        }
+        pageInfo {
+            hasPreviousPage
+            hasNextPage
+            startCursor
+            endCursor
+        }
+    }
+}
+
+mutation CREATE_BANK_ACCOUNT {
+    createBankAccount(input: {
+        firstName: "Jerry"
+        age: 1
+    }) {
+        id
+        currency
+        createdOn
+        createdAt
+    }
+}
+

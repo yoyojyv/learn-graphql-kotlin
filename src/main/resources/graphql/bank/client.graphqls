@@ -1,0 +1,6 @@
+# Client
+type Client {
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
